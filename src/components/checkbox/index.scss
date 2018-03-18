@@ -1,0 +1,53 @@
+$prefixCls: myui__checkbox;
+
+.#{$prefixCls}{
+    display: flex;
+    align-items: center;
+    &--checked{
+        .#{$prefixCls}__icon{
+            position: relative;
+            border-color: #108ee9;
+            background: #108ee9;
+            
+            &:after{
+                content: "";
+                position: absolute;
+                z-index: 999;
+                left: 50%;
+                top: 50%;
+                margin-top: -1px;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 5px;
+                height: 11px;
+                border-style: solid;
+                border-width: 0 1px 1px 0;
+                border-color: #fff;
+            }
+        }
+    }
+    &--disabled{
+        .#{$prefixCls}__icon{
+            opacity: .3;
+            &:after{
+                border-color: #fff;
+            }
+        }
+        .#{$prefixCls}__title{
+            color: #bbb;
+        }
+    }
+    &__icon{
+        position: relative;
+        margin-right: 5px;
+        width: 21px;
+        height: 21px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+    }
+    &__input{
+        display: none;
+    }
+    &__title{
+        flex: 1;
+    }
+}
