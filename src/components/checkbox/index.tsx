@@ -67,7 +67,7 @@ export default class Checkbox extends PureComponent<CheckboxProps, any>{
             <label className={cls}>
                 <div className={`${prefixCls}__icon`}></div>
                 <input type="checkbox" className={`${prefixCls}__input`} disabled={disabled} checked={checked} onChange={this.onValueChange}/>
-                <span className={`${prefixCls}__label`}>{label}</span>
+                <span className={`${prefixCls}__title`}>{label}</span>
             </label>
         )
     }

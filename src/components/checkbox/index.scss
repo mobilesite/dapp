@@ -1,10 +1,10 @@
-$prefixCls: myui__checkbox;
+// $prefixCls: myui__checkbox;
 
-.#{$prefixCls}{
+.myui__checkbox{
     display: flex;
     align-items: center;
     &--checked{
-        .#{$prefixCls}__icon{
+        .myui__checkbox__icon{
             position: relative;
             border-color: #108ee9;
             background: #108ee9;
@@ -26,13 +26,15 @@ $prefixCls: myui__checkbox;
         }
     }
     &--disabled{
-        .#{$prefixCls}__icon{
+        .myui__checkbox__icon{
+            background-color: transparent;
+            border-color: #ccc;
             opacity: .3;
             &:after{
-                border-color: #fff;
+                border-color: #888;
             }
         }
-        .#{$prefixCls}__title{
+        .myui__checkbox__title{
             color: #bbb;
         }
     }
